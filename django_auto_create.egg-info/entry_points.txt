@@ -1,0 +1,3 @@
+[console_scripts]
+django-auto-admin = django_auto.core.management:execute_from_command_line
+

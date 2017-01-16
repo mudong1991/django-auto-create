@@ -1,0 +1,6 @@
+pip
+django>=1.10
+virtualenv>=1.11
+
+[Reversion]
+django-reversion
