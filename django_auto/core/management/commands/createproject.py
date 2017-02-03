@@ -161,7 +161,7 @@ class Command(TemplateCommand):
                         other_modal = self.get_input_data(
                             force_str("If you have a public network, you can enter the other modules you need to "
                                       "install the package, do not need to enter 'n' to exit(such as: redis):"))
-                        if self.check_name(other_modal, "package"):
+                        if other_modal:
                             if other_modal == "N" or other_modal == "n":
                                 break
                             else:
@@ -174,6 +174,8 @@ class Command(TemplateCommand):
                                     env_extend_modal.append("{0}".format(other_modal))
                                 else:
                                     env_extend_modal.append("{0}=={1}".format(other_modal, other_modal_version))
+                        else:
+                            self.stderr.write("The package name cannot be empty!")
 
                     self.stdout.write("Installing package in virtualenv...")
 
