@@ -217,7 +217,7 @@ class Command(TemplateCommand):
 
             self.stdout.write("Modify the project configuration...")
             # New add some directory
-            project_template_dir = os.path.join(project_dir, "template")
+            project_template_dir = os.path.join(project_dir, "templates")
             project_static_dir = os.path.join(project_dir, "static")
             project_collectstatic_dir = os.path.join(project_dir, "collectstatic")
             project_media_dir = os.path.join(project_dir, "media")
